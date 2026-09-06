@@ -127,4 +127,21 @@ The hyperparameters were chosen using five-fold cross-validation because this al
 
 The final model had an RMSE of 6962.31 minutes, which is about 4.84 days off from reality. It is about 53 minutes more accurate at predicting outage duration than the baseline linear regression model, which had an RMSE of 7015.32 minutes.
 
+## Fairness Analysis
+
+Group X: Areas with higher rural population density, meaning observations where POPDEN_RURAL is greater than or equal to the median rural population density.
+
+Group Y: Areas with lower rural population density, meaning observations where POPDEN_RURAL is below the median rural population density.
+
+Evaluation Metric: RMSE (Root Mean Squared Error), which measures prediction error in minutes.
+
+Null Hypothesis: The model has approximately the same RMSE for areas with higher and lower rural population density, and any difference in RMSE is due to random chance.
+
+Alternative Hypothesis: The model has a statistically higher RMSE for areas with higher rural population density than areas with lower rural population density.
+
+Test Statistic: I used the difference in RMSE between the higher rural population density group and the lower rural population density group: Higher Rural Population Density RMSE - Lower Rural Population Density RMSE.
+Significance Level: I used a significance level of 0.05 because it is a commonly used cutoff for determining statistical significance.
+
+The observed difference in RMSE was 4635.43 minutes, with the model having a higher RMSE for areas with higher rural population density. The permutation test resulted in a p-value of 0.281, which is greater than the significance level of 0.05, so I fail to reject the null hypothesis. There is not enough evidence to conclude that the final model performs worse for areas with higher rural population density. Although the observed RMSE was higher for the higher rural population density group, the permutation test suggests that this difference could be due to random chance.
+
 
