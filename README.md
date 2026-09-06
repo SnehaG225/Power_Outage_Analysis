@@ -52,7 +52,6 @@ The first five rows of the cleaned DataFrame are shown below:
     height="500"
     frameborder="0"
 ></iframe>
-
 This histogram shows the distribution of power outage durations. It shows that the distribution is extremely right-skewed, meaning that there are a few extremely high outliers that would drag the mean upward. Therefore, it would be best to use the median as the center point when conducting future analyses and making predictions.
 
 ### Bivariate Analysis
@@ -63,3 +62,5 @@ This histogram shows the distribution of power outage durations. It shows that t
     height="500"
     frameborder="0"
 ></iframe>
+The outage duration was converted to a log scale to make differences and patterns in outage duration easier to see. This graph shows that fuel supply emergencies tend to lead to longer outages, while intentional attacks tend to lead to the shortest outages. Intentional attacks also have the largest IQR, showing that there is a large amount of variation in outage duration within this category.
+
