@@ -62,5 +62,5 @@ This histogram shows the distribution of power outage durations. It shows that t
     height="500"
     frameborder="0"
 ></iframe>
-The outage duration was converted to a log scale to make differences and patterns in outage duration easier to see. This graph shows that fuel supply emergencies tend to lead to longer outages, while intentional attacks tend to lead to the shortest outages. Intentional attacks also have the largest IQR, showing that there is a large amount of variation in outage duration within this category.
+The outage duration was converted to a log scale to make trends in outage duration easier to see, as it is very right-skewed. This graph shows that fuel supply emergencies tend to lead to longer outages, while intentional attacks tend to lead to the shortest outages. Intentional attacks also have the largest IQR, showing that there is a large amount of variation in outage duration within this category.
 
