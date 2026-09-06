@@ -56,3 +56,10 @@ The first five rows of the cleaned DataFrame are shown below:
 This histogram shows the distribution of power outage durations. It shows that the distribution is extremely right-skewed, meaning that there are a few extremely high outliers that would drag the mean upward. Therefore, it would be best to use the median as the center point when conducting future analyses and making predictions.
 
 ### Bivariate Analysis
+
+<iframe
+    src="assets/bivariate1.html"
+    width="100%"
+    height="500"
+    frameborder="0"
+></iframe>
