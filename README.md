@@ -43,3 +43,12 @@ The first five rows of the cleaned DataFrame are shown below:
 | 2 | 3.0 | 2010.0 | 10.0 | Minnesota | ... | 8.41 | 5.48 | 2010-10-26 20:00:00 | 2010-10-28 22:00:00 |
 | 3 | 4.0 | 2012.0 | 6.0 | Minnesota | ... | 8.41 | 5.48 | 2012-06-19 04:30:00 | 2012-06-20 23:00:00 |
 | 4 | 5.0 | 2015.0 | 7.0 | Minnesota | ... | 8.41 | 5.48 | 2015-07-18 02:00:00 | 2015-07-19 07:00:00 |
+
+### Univariate Analysis
+
+<iframe
+    src="assets/outage_duration.html"
+    width="100%"
+    height="500"
+    frameborder="0"
+></iframe>
