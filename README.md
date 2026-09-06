@@ -74,3 +74,10 @@ The outage duration was converted to a log scale to make trends in outage durati
 ></iframe>
 This pivot table compares the median outage duration and the number of outages for each outage cause across cold, normal, and warm climate categories. The table shows that fuel supply emergencies generally have the longest median outage durations, while intentional attacks tend to have the shortest. Severe weather also has consistently high median outage durations across all three climate categories and has the largest number of outages overall. This suggests that outage cause is strongly associated with outage duration, while climate category may also affect the duration for some causes.
 
+## Assessment of Missingness
+
+### MNAR Analysis
+
+It is likely that DEMAND.LOSS.MW is MNAR, or missing not at random, which means that the chances of a value being missing in this column could depend on the amount of demand lost. This variable measures the amount of peak demand lost during an outage, and if the demand loss is very low, it may be less likely to be measured or reported, causing these values to be missing more often. Additional data I could collect to determine if DEMAND.LOSS.MW is MAR is the individual electric company for each outage. I could then conduct an analysis to see whether the missingness of DEMAND.LOSS.MW is dependent on the company reporting the outage. If certain companies are more likely to have missing demand loss values, then the missingness could be explained by the reporting company and considered MAR rather than MNAR.
+
+
