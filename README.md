@@ -119,3 +119,12 @@ With this model, I want to predict the duration of a major power outage using it
 
 The model is a linear regression model and uses CAUSE.CATEGORY, a nominal feature, and POPPCT_URBAN, a quantitative feature. CAUSE.CATEGORY was one-hot encoded because it contains categorical values that cannot be directly used by the linear regression model, and there is no natural ordering between the different causes. POPPCT_URBAN was left unchanged because it is already quantitative. The model had a test RMSE of 7015.32 minutes, meaning that its predictions are typically off from the actual outage durations by roughly 7015 minutes, or 4.9 days. This RMSE was calculated on the testing data, which was not used to train the model, so it measures how well the model generalizes to unseen data. I do not believe this is a particularly good model because being off by around 4.9 days is a pretty significant error when trying to predict how long an outage will last and could affect someone’s actions and preparation during an outage.
 
+## Final Model
+
+I used a Random Forest regression model and ended up using the hyperparameters max_depth = 10 and min_samples_split = 5. The Random Forest regression model seemed most appropriate because it can capture more complex and nonlinear relationships between the different features and outage duration than the linear regression model used for the baseline. It also works well with the combination of categorical and quantitative features I included in the model.
+
+The hyperparameters were chosen using five-fold cross-validation because this allowed me to compare different combinations of max_depth and min_samples_split based on their performance across multiple portions of the training data, rather than choosing the parameters based on a single split. I tested multiple values for both hyperparameters using GridSearchCV and selected the combination that resulted in the lowest cross-validation RMSE. I also compared multiple versions of the Random Forest model with different sets of features and chose the final model based on which had the lowest testing RMSE and the lowest cross-validation RMSE. 
+
+The final model had an RMSE of 6962.31 minutes, which is about 4.84 days off from reality. It is about 53 minutes more accurate at predicting outage duration than the baseline linear regression model, which had an RMSE of 7015.32 minutes.
+
+
