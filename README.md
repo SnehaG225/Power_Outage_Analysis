@@ -47,7 +47,7 @@ The first five rows of the cleaned DataFrame are shown below:
 ### Univariate Analysis
 
 <iframe
-    src="assets/outage_duration.html"
+    src="assets/univariate1.html"
     width="100%"
     height="500"
     frameborder="0"
