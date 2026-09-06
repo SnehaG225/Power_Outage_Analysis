@@ -80,4 +80,23 @@ This pivot table compares the median outage duration and the number of outages f
 
 It is likely that DEMAND.LOSS.MW is MNAR, or missing not at random, which means that the chances of a value being missing in this column could depend on the amount of demand lost. This variable measures the amount of peak demand lost during an outage, and if the demand loss is very low, it may be less likely to be measured or reported, causing these values to be missing more often. Additional data I could collect to determine if DEMAND.LOSS.MW is MAR is the individual electric company for each outage. I could then conduct an analysis to see whether the missingness of DEMAND.LOSS.MW is dependent on the company reporting the outage. If certain companies are more likely to have missing demand loss values, then the missingness could be explained by the reporting company and considered MAR rather than MNAR.
 
+### Missingness Dependency
+
+<iframe
+    src="assets/missingness_plot.html"
+    width="100%"
+    height="500"
+    frameborder="0"
+></iframe>
+
+I ran two permutation tests to examine whether the missingness of outage duration depends on other variables.
+The first permutation test shows that the missingness of OUTAGE.DURATION is not dependent on POPPCT_URBAN. The observed difference in means was about 0.57 and the p-value was 0.688. Since the p-value is greater than 0.05, I fail to reject the null hypothesis that there is no difference in POPPCT_URBAN between outages where duration is missing and where it is not missing.
+
+The second permutation test shows that the missingness of OUTAGE.DURATION is dependent on POPDEN_RURAL. The observed difference in means was about 12.10, and none of the 500 simulated differences were as large as the observed difference, giving a simulated p-value of 0. Since this is less than 0.05, I reject the null hypothesis and conclude that there is evidence that the missingness of OUTAGE.DURATION depends on rural population density. This suggests that the missingness of OUTAGE.DURATION may be MAR (Missing At Random), since its missingness is associated with another observed variable in the dataset, POPDEN_RURAL.
+
+The histogram also shows a difference between the distribution of rural population density when OUTAGE.DURATION is missing versus when it is not missing. Missing outage durations are more concentrated at lower rural population densities, showing an association between the variables, while non-missing outage durations are more spread out across higher values.
+
+This is important to my research question because I am examining how outage duration varies with urban and rural population characteristics. Since outage duration is more likely to be missing for certain rural population densities, this missingness could affect the relationships between population characteristics and outage duration that I observe in my analysis.
+
+
 
