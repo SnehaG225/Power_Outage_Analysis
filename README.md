@@ -98,5 +98,16 @@ The histogram also shows a difference between the distribution of rural populati
 
 This is important to my research question because I am examining how outage duration varies with urban and rural population characteristics. Since outage duration is more likely to be missing for certain rural population densities, this missingness could affect the relationships between population characteristics and outage duration that I observe in my analysis.
 
+## Hypothesis Testing
 
+Null Hypothesis: Power outages caused by severe weather and power outages caused by other causes have the same median outage duration. Any difference we see between the two groups is due to random chance.
+
+Alternative Hypothesis: Power outages caused by severe weather have a longer median outage duration than power outages caused by other causes.
+
+Test Statistic: Median outage duration for severe weather outages minus median outage duration for non-severe weather outages. I chose to use the median because outage duration is extremely right-skewed and has many large outliers, so the median better represents a typical outage duration. I used a one-sided test because I am specifically testing whether severe weather outages have a longer median duration than other outages, rather than just testing whether the two groups have different median durations. This is appropriate to test because it was discovered in the bivariate plot that severe weather appears to have higher
+median durations.
+
+Significance Level: I used a significance level of 0.05 because it is a commonly used significance level for hypothesis tests.
+
+The observed difference in medians was 2317.5 minutes, meaning that severe weather outages had a median outage duration 2317.5 minutes longer than non-severe weather outages. The permutation test gave a simulated p-value of 0.0 which is below the significance level of 0.05, meaning I reject the null hypothesis and conclude that there is evidence that power outages caused by severe weather have a longer median outage duration than power outages caused by other causes. These choices make sense for my question because I am trying to determine what characteristics are associated with outage duration, and one of the characteristics I am examining is the cause of the outage. Comparing severe weather outages to other outages allows me to see whether severe weather is associated with longer outage durations.
 
