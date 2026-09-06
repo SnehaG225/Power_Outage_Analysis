@@ -64,3 +64,13 @@ This histogram shows the distribution of power outage durations. It shows that t
 ></iframe>
 The outage duration was converted to a log scale to make trends in outage duration easier to see, as it is very right-skewed. This graph shows that fuel supply emergencies tend to lead to longer outages, while intentional attacks tend to lead to the shortest outages. Intentional attacks also have the largest IQR, showing that there is a large amount of variation in outage duration within this category.
 
+### Interesting Aggregates
+
+<iframe
+    src="assets/pivot1.html"
+    width="100%"
+    height="500"
+    frameborder="0"
+></iframe>
+This pivot table compares the median outage duration and the number of outages for each outage cause across cold, normal, and warm climate categories. The table shows that fuel supply emergencies generally have the longest median outage durations, while intentional attacks tend to have the shortest. Severe weather also has consistently high median outage durations across all three climate categories and has the largest number of outages overall. This suggests that outage cause is strongly associated with outage duration, while climate category may also affect the duration for some causes.
+
