@@ -20,4 +20,4 @@ The dataset contains 1,534 rows, with each row representing a major power outage
 | `CLIMATE.CATEGORY` | This represents the climate episodes corresponding to the years. The categories—“Warm”, “Cold” or “Normal” episodes of the climate are based on a threshold of ±0.5°C for the Oceanic Niño Index (ONI) |
 | `POPDEN_RURAL` | Population density of the rural areas (persons per square mile) |
 
-*Descriptions pulled directly from the Data Description listed in: [Data on major power outage events in the continental U.S. - sciencedirect. (n.d.).](https://www.sciencedirect.com/science/article/pii/S2352340918307182).*
+*Descriptions pulled directly from the Data Description listed in: Data on major power outage events in the continental U.S. - sciencedirect. (n.d.).[(https://www.sciencedirect.com/science/article/pii/S2352340918307182)].*
