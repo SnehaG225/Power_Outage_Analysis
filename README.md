@@ -121,7 +121,7 @@ The model is a linear regression model and uses CAUSE.CATEGORY, a nominal featur
 
 ## Final Model
 
-I used a Random Forest regression model and ended up using the hyperparameters max_depth = 10 and min_samples_split = 5. The Random Forest regression model seemed most appropriate because it can capture more complex and nonlinear relationships between the different features and outage duration than the linear regression model used for the baseline. It also works well with the combination of categorical and quantitative features I included in the model.
+I used a Random Forest regression model and ended up using the hyperparameters max_depth = 10 and min_samples_split = 50. The Random Forest regression model seemed most appropriate because it can capture more complex and nonlinear relationships between the different features and outage duration than the linear regression model used for the baseline. It also works well with the combination of categorical and quantitative features I included in the model.
 
 The hyperparameters were chosen using five-fold cross-validation because this allowed me to compare different combinations of max_depth and min_samples_split based on their performance across multiple portions of the training data, rather than choosing the parameters based on a single split. I tested multiple values for both hyperparameters using GridSearchCV and selected the combination that resulted in the lowest cross-validation RMSE. I also compared multiple versions of the Random Forest model with different sets of features and chose the final model based on which had the lowest testing RMSE and the lowest cross-validation RMSE. 
 
